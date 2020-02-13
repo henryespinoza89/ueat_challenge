@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Instalación
 
-Descargar o clonar proyecto
-Ejecutar comando: npm install para instalar las dependecias
-Finalmente ejecutar el comando: ng serve -o
+Descargar o clonar proyecto<br/>
+Ejecutar comando: npm install para instalar las dependecias<br/>
+Finalmente ejecutar el comando: ng serve -o<br/>
 :)
 
 ## Development server
