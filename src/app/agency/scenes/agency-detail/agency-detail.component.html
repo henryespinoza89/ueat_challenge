@@ -1,0 +1,77 @@
+<!-- prettier-ignore -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 pl-4">
+            <button type="submit" class="btn btn-info" (click)="back()">
+              Regresar
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 pl-4">
+            <div class="mb-20 app-detail-agency__title">
+                <span class="pl-2">ACTUALIZAR AGENCIA</span>
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="agencyForm" novalidate>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group has-label">
+                        <label class="control-label" for="">Nombre de la agencia <span class="star">*</span></label>
+                        <input type="text" class="form-control" name="agency_name" formControlName="agency_name" required [ngClass]="{ 'is-invalid': agencyName.invalid && agencyName.touched, 'is-valid': agencyName.valid && agencyName.touched }" />
+                        <div *ngIf="agencyName.invalid && (agencyName.dirty || agencyName.touched)" class="app-detail-invalid-feedback">
+                            <div *ngIf="agencyName.errors?.required">
+                                Este campo es requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group has-label">
+                        <label class="control-label" for="">Distrito <span class="star">*</span></label>
+                        <input type="text" class="form-control" name="district" formControlName="district" required [ngClass]="{ 'is-invalid': agencyDistrict.invalid && agencyDistrict.touched, 'is-valid': agencyDistrict.valid && agencyDistrict.touched }" />
+                        <div *ngIf="agencyDistrict.invalid && (agencyDistrict.dirty || agencyDistrict.touched)" class="app-detail-invalid-feedback">
+                            <div *ngIf="agencyDistrict.errors?.required">
+                                Este campo es requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group has-label">
+                        <label class="control-label" for="">Provincia <span class="star">*</span></label>
+                        <input type="text" class="form-control" name="province" formControlName="province" required [ngClass]="{ 'is-invalid': agencyProvince.invalid && agencyProvince.touched, 'is-valid': agencyProvince.valid && agencyProvince.touched }" />
+                        <div *ngIf="agencyProvince.invalid && (agencyProvince.dirty || agencyProvince.touched)" class="app-detail-invalid-feedback">
+                            <div *ngIf="agencyProvince.errors?.required">
+                                Este campo es requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group has-label">
+                        <label class="control-label" for="">Departamento <span class="star">*</span></label>
+                        <input type="text" class="form-control" name="dep" formControlName="dep" required [ngClass]="{ 'is-invalid': agencyDep.invalid && agencyDep.touched, 'is-valid': agencyDep.valid && agencyDep.touched }" />
+                        <div *ngIf="agencyDep.invalid && (agencyDep.dirty || agencyDep.touched)" class="app-detail-invalid-feedback">
+                            <div *ngIf="agencyDep.errors?.required">
+                                Este campo es requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group has-label">
+                        <label class="control-label" for="">Dirección <span class="star">*</span></label>
+                        <input type="text" class="form-control" name="address" formControlName="address" required [ngClass]="{ 'is-invalid': agencyAddress.invalid && agencyAddress.touched, 'is-valid': agencyAddress.valid && agencyAddress.touched }" />
+                        <div *ngIf="agencyAddress.invalid && (agencyAddress.dirty || agencyAddress.touched)" class="app-detail-invalid-feedback">
+                            <div *ngIf="agencyAddress.errors?.required">
+                                Este campo es requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category"><span class="star">*</span> Campos requeridos</div>
+                    <div class="app-detail-modal-footer text-right">
+                        <button type="submit" class="btn btn-primary" (click)="updateAgency()" [disabled]="agencyForm.invalid">
+                          Actualizar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div id="map"></div>
+</div>
