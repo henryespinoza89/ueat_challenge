@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Instalación
 
-Donwload or clone the project.<br/>
+Donwload or clone the project from <b>https://github.com/henryespinoza89/ueat_challenge</b><br/>
 Run command: npm install to install dependencies<br/>
 Finally run command: ng serve -o to test funcionally the project<br/>
 
