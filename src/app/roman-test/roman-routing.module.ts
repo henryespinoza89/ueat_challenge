@@ -4,8 +4,7 @@ import { RouterModule } from '@angular/router';
  * Componentes
  */
 import { BaseComponent } from './scenes/base/base.component';
-import { AgencyListComponent } from './scenes/agency-list/agency-list.component';
-import { AgencyDetailComponent } from './scenes/agency-detail/agency-detail.component';
+import { RomanTestComponent } from './scenes/roman-test/roman-test.component';
 
 const routes = [
   {
@@ -14,11 +13,7 @@ const routes = [
     children: [
       {
         path: '',
-        component: AgencyListComponent
-      },
-      {
-        path: 'agency/:id',
-        component: AgencyDetailComponent
+        component: RomanTestComponent
       }
     ]
   }
@@ -27,4 +22,4 @@ const routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AgencyRoutingModule {}
+export class RomanRoutingModule {}

@@ -3,25 +3,21 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AgencyRoutingModule } from './agency-routing.module';
+import { RomanRoutingModule } from './roman-routing.module';
 /**
  * Components
  */
 import { BaseComponent } from './scenes/base/base.component';
-import { AgencyListComponent } from './scenes/agency-list/agency-list.component';
-import { AgencyDetailComponent } from './scenes/agency-detail/agency-detail.component';
-import { AgencyCardComponent } from './components/agency-card/agency-card.component';
+import { RomanTestComponent } from './scenes/roman-test/roman-test.component';
 /**
  * Services
  */
-import { AgencyService } from './agency.service';
+// import { AgencyService } from './agency.service';
 
 @NgModule({
   declarations: [
     BaseComponent,
-    AgencyListComponent,
-    AgencyDetailComponent,
-    AgencyCardComponent
+    RomanTestComponent
   ],
   imports: [
     CommonModule,
@@ -29,9 +25,9 @@ import { AgencyService } from './agency.service';
     RouterModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AgencyRoutingModule
+    RomanRoutingModule
   ],
   exports: [],
-  providers: [AgencyService]
+  providers: []
 })
-export class AgencyModule {}
+export class RomanModule {}

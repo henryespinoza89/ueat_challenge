@@ -1,0 +1,39 @@
+<form [formGroup]="romanForm" novalidate>
+    <div class="row">
+        <div class="col-12">
+            <div class="mb-20 app-roman__title">
+                <span>INSERT ROMAN NUMBER</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="form-group has-label">
+                <input type="text" class="form-control" name="roman_number" formControlName="roman_number" required
+                    [ngClass]="{ 'is-invalid': romanNumber.invalid && romanNumber.touched, 'is-valid': romanNumber.valid && romanNumber.touched }" />
+                <div *ngIf="romanNumber.invalid && (romanNumber.dirty || romanNumber.touched)" class="app-roman-invalid-feedback">
+                    <div *ngIf="romanNumber.errors?.required">
+                        This field is required
+                    </div>
+                    <div *ngIf="romanNumber.errors?.format">
+                        {{ romanNumber.errors?.format }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="mb-20 app-roman__title">
+                <span>RESULT</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="form-group has-label">
+                <input type="text" class="form-control" name="result" formControlName="result" />
+            </div>
+        </div>
+    </div>
+</form>
